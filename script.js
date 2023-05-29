@@ -24,3 +24,25 @@ function initGame(){
     gameInfo.innerText=`Current Player-${currentPlayer}`;
 }
 initGame();
+
+boxes.forEach((box,index)=>{
+    box.addEventListener("click",()=>{
+handleClick(index);
+    })
+})
+
+function handleClick(index){
+    boxes[index].innerText=currentPlayer;
+    gameGrid[index]=currentPlayer;
+    swapTurn();
+    checkGameOver();
+}
+function swapTurn(){
+    if(currentPlayer==="X"){
+        currentPlayer="O";
+    }
+    else{
+        currentPlayer="X"
+    }
+    gameInfo.innerText=`Current Player-${currentPlayer}`;
+}
