@@ -1,5 +1,5 @@
 # Tic-Tac-Toe
-This is a SImple Tic Tac Toe Game using Html,Css and Javascript.
+This is a Simple Tic Tac Toe Game using Html,Css and Javascript.
 
 This repository contains a simple implementation of the classic game Tic-Tac-Toe using HTML, CSS, and JavaScript. The game provides a user interface where two players can take turns placing their respective symbols (X and O) on a 3x3 grid. The goal of the game is to get three of the same symbols in a row, column, or diagonal.
 
