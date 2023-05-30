@@ -20,6 +20,10 @@ let winningPositions=[
 function initGame(){
     currentPlayer="X";
     gameGrid=["","","","","","","","",""];
+    boxes.forEach((box,index)=>{
+        box.innerText="";
+        boxes[index].style.pointerEvents="all";
+    });
     newGameBtn.classList.remove("active");
     gameInfo.innerText=`Current Player-${currentPlayer}`;
 }
@@ -34,6 +38,7 @@ handleClick(index);
 function handleClick(index){
     boxes[index].innerText=currentPlayer;
     gameGrid[index]=currentPlayer;
+    boxes[index].style.pointerEvents="none";
     swapTurn();
     checkGameOver();
 }
@@ -46,3 +51,9 @@ function swapTurn(){
     }
     gameInfo.innerText=`Current Player-${currentPlayer}`;
 }
+
+
+newGameBtn.addEventListener("click",initGame);
+
+
+
